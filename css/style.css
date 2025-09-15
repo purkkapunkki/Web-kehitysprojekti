@@ -1,0 +1,28 @@
+:root {
+  --red: #cd4e3e;
+  --brown: #b59665;
+  --black: #282828;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+#main-nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:link {
+  text-decoration: none;
+  cursor: pointer;
+}
