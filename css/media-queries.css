@@ -1,0 +1,24 @@
+@media only screen and (max-width: 800px) {
+  body {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #main-nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 801px) {
+}
+
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }}

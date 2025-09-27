@@ -1,0 +1,56 @@
+/* Base */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+nav {
+  background: #333;
+  color: white;
+  padding: 1rem;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+main {
+  background: #f9f9f9;
+}
+
+/* Footer section */
+.footer-section {
+  background: #eaeaea;
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+/* Sticky wrapper ensures footer respects both top & bottom */
+.sticky-wrapper {
+  position: sticky;
+  bottom: 0;
+  top: 0;
+}
+
+/* Footer styles */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 10;
+  position: sticky;
+  bottom: 0;
+}
+
+/* Content below the sticky heading */
+.footer-content {
+  padding: 2rem;
+}

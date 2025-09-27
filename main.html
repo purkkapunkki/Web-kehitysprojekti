@@ -5,32 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
+    <link rel="stylesheet" href="css/hamburger-menu.css" />
+    <script
+      src="https://kit.fontawesome.com/690006849c.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>Menu</li>
-        <li>Cart</li>
-        <li>Sign-in</li>
+    <nav class="navigation-bar">
+      <span class="toggle-button">&#9776;</span>
+      <a href="#" class="logo">Logo</a>
+      <ul class="main-menu">
+        <li><a href="#" class="nav-item">Etusivu</a></li>
+        <li><a href="menu.html" class="nav-item">Menu</a></li>
+        <li><a href="#" class="nav-item">Kirjaudu</a></li>
+        <li><a href="#" class="nav-item">Ostoskori</a></li>
       </ul>
     </nav>
-    <dialog id="sign-in-dialog"></dialog>
+
+    <i class="fa-solid fa-bars menuIcon"></i>
+    <i class="fa-solid fa-xmark closeIcon"></i>
 
     <main>
-      <h1>LOGO</h1>
-      <img src="" alt="kuva sushist tms" />
-
-      <div id="sale-articles">
-        <article></article>
-        <article></article>
-        <article></article>
+      <div id="hero-image">
+        <div id="hero-text">
+          <h1>Tervetuloa!</h1>
+          <h3>Jotain tekstiä</h3>
+        </div>
       </div>
-
-      <div>card slider for most popular foods</div>
-      <div>5 leiman mainos</div>
     </main>
 
     <footer></footer>
+    <script src="js/script.js" defer></script>
   </body>
 </html>
