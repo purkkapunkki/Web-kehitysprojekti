@@ -8,9 +8,22 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 400;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+@font-face {
+  font-family: "Shinkai-Ink-Font";
+  src: url("../fonts/ShinkaiInk-MAX2x.otf") format("opentype");
+}
+
+#restaurant-name {
+  font-family: "Shinkai-Ink-Font", sans-serif;
+  line-height: 1;
 }
 
 #hero-image {
