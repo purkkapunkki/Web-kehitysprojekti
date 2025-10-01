@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping-basket-items</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
+    <link rel="stylesheet" href="css/hamburger-menu.css" />
+    <script
+      src="https://kit.fontawesome.com/690006849c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navigation-bar">
+      <span class="toggle-button">&#9776;</span>
+      <a href="#" class="logo">Logo</a>
+      <ul class="main-menu">
+        <li><a href="main.html" class="menu-item">Etusivu</a></li>
+        <li><a href="menu.html" class="menu-item">Menu</a></li>
+        <li><a href="#" class="menu-item">Kirjaudu</a></li>
+        <li><a href="shopping-basket.html" class="menu-item">Ostoskori</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <li>
+        <a href="main.html" class="text-link">
+          <i class="fa-solid fa-arrow-left"></i>Keskeytä tilaus
+        </a>
+      </li>
+      <h1>Ostoskori</h1>
+
+      <div id="order-container" class="order-containers">
+        <section id="order" class="order-containers">
+          <h2>Tilauksesi</h2>
+          <hr />
+          <p>Tilatut itemit</p>
+          <i class="fa-solid fa-trash"></i>
+        </section>
+
+        <section id="billing" class="order-containers">
+          <h3>Lasku</h3>
+          <p>numeroita yms vatteja</p>
+          <button>
+            Siirry eteenpäin<i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </section>
+      </div>
+    </main>
+
+    <footer></footer>
+    <script src="js/hamburger-menu.js" defer></script>
+  </body>
+</html>
