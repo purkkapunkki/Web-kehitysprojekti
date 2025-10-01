@@ -3,6 +3,12 @@
   --brown: rgb(181, 150, 101);
   --black: rgb(40, 40, 40);
   --white: rgb(255, 255, 255);
+  --light-blue-gray: #9cbcc8;
+  --gradient: linear-gradient(
+    to bottom right,
+    var(--white),
+    var(--light-blue-gray)
+  );
 }
 
 * {
@@ -67,8 +73,80 @@ body {
   a {
     font-weight: 550;
   }
+}
+
+#order-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin: 1em;
+}
+
+#order {
+  grid-column: 1;
+}
+
+#billing {
+  grid-column: 2;
+}
+
+#lunch-sale-img {
+  clip-path: circle(50% at 50% 50%);
+  width: 25%;
+  height: 25%;
+}
+
+#commercials {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  margin: 1em;
+}
+
+#lunch-price {
+  text-decoration-line: line-through;
+}
+
+#sale-lunch-price {
   color: var(--red);
-  font-size: 3em;
+  font-size: 2em;
+  font-weight: 650;
+}
+
+.order-containers {
+  background: var(--gradient);
+  border-radius: 12px;
+  padding: 2em;
+}
+
+.commercial-container h1 {
+  color: var(--red);
+  font-weight: 500;
+}
+
+.center {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.buttons {
+  cursor: pointer;
+  background-color: var(--white);
+  font-size: 1em;
+  border-radius: 30px;
+  padding: 0.5em;
+  border: solid 0.1px var(--red);
+  &:hover {
+    box-shadow: 0 0 10px var(--red);
+  }
+}
+
+.text-link {
+  color: var(--red);
+}
+
+input[type="checkbox"] {
+  accent-color: var(--red);
 }
 
 ul {
