@@ -2,9 +2,6 @@
   body {
     margin-left: 0;
     margin-right: 0;
-  }
-
-  body {
     display: flex;
     flex-direction: column;
   }
