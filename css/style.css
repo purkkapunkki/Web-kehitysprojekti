@@ -51,6 +51,22 @@ body {
   top: calc(50% + 127px);
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 2em;
+  h1 {
+    font-size: 3em;
+    line-height: 1.5;
+  }
+  h3 {
+    color: var(--red);
+    font-size: 1.5em;
+    font-weight: 500;
+  }
+  p {
+    font-size: 1em;
+  }
+  a {
+    font-weight: 550;
+  }
   color: var(--red);
   font-size: 3em;
 }
