@@ -57,3 +57,11 @@ a:link {
   text-decoration: none;
   cursor: pointer;
 }
+
+.main-menu li {
+  transition: 0.2s ease-in-out;
+}
+
+.main-menu li:hover {
+  transform: translateY(-0.2rem);
+}
