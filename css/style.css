@@ -29,12 +29,11 @@ body {
 #hero-image {
   background-color: var(--light-gray);
   background-image: url("../img/tausta.jpg");
-  height: 70vh;
+  height: 115vh;
   width: 100%;
   background-position: center bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
@@ -42,7 +41,8 @@ body {
 #hero-text {
   text-align: center;
   position: absolute;
-  top: 50%;
+  /* Magic 🪄 */
+  top: calc(50% + 127px);
   left: 50%;
   transform: translate(-50%, -50%);
   color: var(--red);
