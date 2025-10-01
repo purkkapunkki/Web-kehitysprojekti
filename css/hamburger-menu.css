@@ -19,10 +19,6 @@ body {
   text-decoration: none;
   color: var(--white);
 }
-
-.menu-item:hover {
-  text-decoration-line: underline;
-}
 /* Basic Styles Ends */
 /* Adding Styles to Menu Items and Logo Start */
 .main-menu li {
