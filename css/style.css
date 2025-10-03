@@ -3,7 +3,7 @@
   --brown: rgb(181, 150, 101);
   --black: rgb(40, 40, 40);
   --white: rgb(255, 255, 255);
-  --light-blue-gray: #9cbcc8;
+  --light-blue-gray: rgb(156, 188, 200);
   --gradient: linear-gradient(
     to bottom right,
     var(--white),
@@ -113,7 +113,7 @@ body {
   font-weight: 650;
 }
 
-.order-containers {
+.containers {
   background: var(--gradient);
   border-radius: 12px;
   padding: 2em;
@@ -145,6 +145,14 @@ body {
   color: var(--red);
 }
 
+.main-menu li {
+  transition: 0.2s ease-in-out;
+}
+
+.main-menu li:hover {
+  transform: translateY(-0.2rem);
+}
+
 input[type="checkbox"] {
   accent-color: var(--red);
 }
@@ -156,12 +164,4 @@ ul {
 a:link {
   text-decoration: none;
   cursor: pointer;
-}
-
-.main-menu li {
-  transition: 0.2s ease-in-out;
-}
-
-.main-menu li:hover {
-  transform: translateY(-0.2rem);
 }
