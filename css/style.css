@@ -147,10 +147,9 @@ body {
 
 .main-menu li {
   transition: 0.2s ease-in-out;
-}
-
-.main-menu li:hover {
-  transform: translateY(-0.2rem);
+  &:hover {
+    transform: translateY(-0.2rem);
+  }
 }
 
 input[type="checkbox"] {
