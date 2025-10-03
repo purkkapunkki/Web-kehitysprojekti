@@ -6,6 +6,18 @@
     flex-direction: column;
   }
 
+  #order-container {
+    grid-template-columns: 1fr;
+  }
+
+  #order {
+    grid-column: 1;
+  }
+
+  #billing {
+    grid-column: 1;
+  }
+
   #main-nav {
     display: flex;
     flex-direction: column;
