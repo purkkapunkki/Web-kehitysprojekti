@@ -17,6 +17,10 @@
     flex-direction: row;
   }
 
+  #combo-offer {
+    flex-direction: row;
+  }
+
   .grid-container {
     grid-template-columns: 1fr 1fr;
   }

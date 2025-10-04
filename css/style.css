@@ -79,15 +79,16 @@ main {
   }
 }
 
-#lunch-sale-img {
+.lunch-sale-img {
   clip-path: circle(50% at 50% 50%);
-  width: 25%;
-  height: 25%;
+  width: 200px;
+  height: 200px;
 }
 
 #commercials {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   gap: 25px;
   margin-top: 25px;
 }
@@ -100,6 +101,12 @@ main {
   color: var(--red);
   font-size: 2em;
   font-weight: 650;
+}
+
+#combo-offer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .containers {
@@ -122,9 +129,12 @@ main {
   grid-column: 1;
 }
 
-.commercial-container h1 {
-  color: var(--red);
-  font-weight: 500;
+.commercial-container {
+  flex-grow: 1;
+  h1 {
+    color: var(--red);
+    font-weight: 500;
+  }
 }
 
 .center {
