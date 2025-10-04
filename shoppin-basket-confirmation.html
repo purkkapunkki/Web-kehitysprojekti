@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping-basket-confirmation</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media-queries.css" />
+    <link rel="stylesheet" href="css/hamburger-menu.css" />
+    <script
+      src="https://kit.fontawesome.com/690006849c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navigation-bar">
+      <span class="toggle-button">&#9776;</span>
+      <a href="#" class="logo">Logo</a>
+      <ul class="main-menu">
+        <li><a href="main.html" class="menu-item">Etusivu</a></li>
+        <li><a href="menu.html" class="menu-item">Menu</a></li>
+        <li><a href="#" class="menu-item">Kirjaudu</a></li>
+        <li><a href="shopping-basket.html" class="menu-item">Ostoskori</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <li>
+        <a href="main.html" class="text-link">
+          <i class="fa-solid fa-arrow-left"></i>Keskeytä tilaus
+        </a>
+      </li>
+      <h1>Ostoskori</h1>
+      <li>
+        <a href="shopping-basket-info.html" class="text-link">
+          <i class="fa-solid fa-arrow-left"></i>Palaa Yheystietoihin &
+          maksuvalintaan
+        </a>
+      </li>
+      <div id="order-container" class="order-containers">
+        <h2>Tilauksesi yhteenveto</h2>
+
+        <section id="order" class="order-containers">
+          <p>Tilatut itemit</p>
+          <p>yhteystiedot</p>
+          <p>maksutapa</p>
+        </section>
+
+        <section id="billing" class="order-containers">
+          <h3>Lasku</h3>
+          <p>numeroita yms vatteja</p>
+          <form action="">
+            <input type="checkbox" id="nappi1" name="nappi1" value="Ehdot" />
+            <label for="nappi1"
+              >Kyllä, olen lukenut ehdot ja hyväksyn ne. pist tähä ku klikkaa ni
+              aukee dialogi ikkuna
+            </label>
+            <br />
+            <input
+              type="checkbox"
+              id="nappi2"
+              name="nappi2"
+              value="Uutiskirje"
+            />
+            <label for="nappi2"
+              >Kyllä, haluan tilata uutiskirjeen ja saada sähköpostiini uusimmat
+              edut ja tarjoukset.
+            </label>
+            <br />
+            <input type="submit" value="Lähetä tilaus" class="buttons" />
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer></footer>
+    <script src="js/hamburger-menu.js" defer></script>
+  </body>
+</html>

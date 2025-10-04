@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media-queries.css" />
     <link rel="stylesheet" href="css/hamburger-menu.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/690006849c.js"
       crossorigin="anonymous"
@@ -14,29 +20,103 @@
   </head>
   <body>
     <nav class="navigation-bar">
-      <span class="toggle-button">&#9776;</span>
-      <a href="#" class="logo">Logo</a>
+      <span class="toggle-button"><i class="fa-solid fa-bars"></i></span>
+      <h1 id="restaurant-name">Ravintola</h1>
       <ul class="main-menu">
-        <li><a href="#" class="nav-item">Etusivu</a></li>
-        <li><a href="menu.html" class="nav-item">Menu</a></li>
-        <li><a href="#" class="nav-item">Kirjaudu</a></li>
-        <li><a href="#" class="nav-item">Ostoskori</a></li>
+        <li>
+          <a href="main.html" class="menu-item">
+            <i class="fa-solid fa-xl fa-house-chimney" title="Etusivu"></i>
+            <span class="menu-item-title">Etusivu</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu-item">
+            <i class="fa-solid fa-xl fa-utensils" title="Ruokalista"></i>
+            <span class="menu-item-title">Ruokalista</span>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="menu-item">
+            <i
+              class="fa-solid fa-xl fa-arrow-right-to-bracket"
+              title="Kirjaudu sisään"
+            ></i>
+            <span class="menu-item-title">Kirjaudu sisään</span>
+          </a>
+        </li>
+        <li>
+          <a href="shopping-basket-items.html" class="menu-item">
+            <i class="fa-solid fa-xl fa-basket-shopping" title="Ostoskori"></i>
+            <span class="menu-item-title">Ostoskori</span>
+          </a>
+        </li>
       </ul>
     </nav>
 
-    <i class="fa-solid fa-bars menuIcon"></i>
-    <i class="fa-solid fa-xmark closeIcon"></i>
-
     <main>
-      <div id="hero-image">
-        <div id="hero-text">
-          <h1>Tervetuloa!</h1>
-          <h3>Jotain tekstiä</h3>
-        </div>
-      </div>
-    </main>
+      <article id="hero-image">
+        <section id="hero-text">
+          <img src="img/sushilogo.png" alt="logo" id="logo" />
+          <h1 id="restaurant-name">Ravintola</h1>
+          <h3>Tervetuloa!</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+            dignissimos tenetur molestias incidunt ab.
+          </p>
+          <br />
+          <a href="#" class="text-link"
+            >Siirry katsomaan menua<i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </section>
+      </article>
 
+      <article id="commercials">
+        <section class="order-containers commercial-container">
+          <h1>Vain tänään!</h1>
+          <h2>Tämän päivän lounasateriasta -10%</h2>
+          <img
+            src="img/kappamaki-sushi.jpg"
+            alt="kuva kappamakista"
+            id="lunch-sale-img"
+          />
+          <h3>Kappamaki</h3>
+          <p id="lunch-price">8,99&euro;</p>
+          <p id="sale-lunch-price">8,99&euro;</p>
+          <button class="buttons">Lisää ostoskoriin</button>
+        </section>
+
+        <section class="order-containers commercial-container">
+          <h1>Tämän viikon combo!</h1>
+          <h2>Ostamalla aterian mukana juoman säästät -5%</h2>
+          <div>
+            <img
+              src="img/salmon-nigiri.jpg"
+              alt="kuva lohinigiristä"
+              id="lunch-sale-img"
+            />
+
+            <i class="fa-solid fa-plus"></i>
+
+            <h3>Lohi nigiri</h3>
+            <p id="lunch-price">8,99&euro;</p>
+            <p id="sale-lunch-price">8,99&euro;</p>
+          </div>
+          <div>
+            <img
+              src="img/novelle.jpg"
+              alt="kuva novelle kivennäisvedestä"
+              id="lunch-sale-img"
+            />
+            <h3>Novelle kivennäisvesi</h3>
+            <p id="lunch-price">2,99&euro;</p>
+            <p id="sale-lunch-price">2,99&euro;</p>
+          </div>
+        </section>
+      </article>
+
+      <section>karuselli top ruuist</section>
+    </main>
     <footer></footer>
-    <script src="js/script.js" defer></script>
+    <script src="js/hamburger-menu.js" defer></script>
   </body>
 </html>
