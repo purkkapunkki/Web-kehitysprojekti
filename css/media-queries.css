@@ -6,15 +6,15 @@
     flex-direction: column;
   }
 
-  #order-container {
+  .grid-container {
     grid-template-columns: 1fr;
   }
 
-  #order {
+  .grid-column-1 {
     grid-column: 1;
   }
 
-  #billing {
+  .grid-column-2 {
     grid-column: 1;
   }
 
