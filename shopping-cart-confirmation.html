@@ -47,52 +47,56 @@
       </ul>
     </nav>
 
-    <main>
-      <li>
-        <a href="main.html" class="text-link">
-          <i class="fa-solid fa-arrow-left"></i>Keskeytä tilaus
-        </a>
-      </li>
-      <h1>Ostoskori</h1>
-      <li>
-        <a href="shopping-cart-info.html" class="text-link">
-          <i class="fa-solid fa-arrow-left"></i>
-          Palaa yhteystietoihin & maksutavan valintaan
-        </a>
-      </li>
-      <div class="containers grid-container">
-        <h2>Tilauksesi yhteenveto</h2>
+    <main class="shopping-cart-page">
+      <div class="containers">
+        <li>
+          <a href="main.html" class="text-link">
+            <i class="fa-solid fa-arrow-left"></i>Keskeytä tilaus
+          </a>
+        </li>
+        <h1>Ostoskori</h1>
+        <li>
+          <a href="shopping-cart-info.html" class="text-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            Palaa yhteystietoihin & maksutavan valintaan
+          </a>
+        </li>
 
-        <section class="containers grid-column-1">
-          <p>Tilatut itemit</p>
-          <p>yhteystiedot</p>
-          <p>maksutapa</p>
-        </section>
+        <div class="grid-container">
+          <section class="containers grid-column-1">
+            <h2>Tilauksesi yhteenveto</h2>
+            <p>Tilatut itemit</p>
+            <p>yhteystiedot</p>
+            <p>maksutapa</p>
+          </section>
 
-        <section class="containers grid-column-2">
-          <h3>Lasku</h3>
-          <p>numeroita yms vatteja</p>
-          <form action="">
-            <input type="checkbox" id="nappi1" name="nappi1" value="Ehdot" />
-            <label for="nappi1"
-              >Kyllä, olen lukenut ehdot ja hyväksyn ne. pist tähä ku klikkaa ni
-              aukee dialogi ikkuna
-            </label>
-            <br />
-            <input
-              type="checkbox"
-              id="nappi2"
-              name="nappi2"
-              value="Uutiskirje"
-            />
-            <label for="nappi2"
-              >Kyllä, haluan tilata uutiskirjeen ja saada sähköpostiini uusimmat
-              edut ja tarjoukset.
-            </label>
-            <br />
-            <input type="submit" value="Lähetä tilaus" class="buttons" />
-          </form>
-        </section>
+          <section class="containers grid-column-2">
+            <h3>Lasku</h3>
+            <p>numeroita yms vatteja</p>
+            <form action="">
+              <input type="checkbox" id="nappi1" name="nappi1" value="Ehdot" />
+              <label for="nappi1"
+                >Kyllä, olen lukenut ehdot ja hyväksyn ne. pist tähä ku klikkaa
+                ni aukee dialogi ikkuna
+              </label>
+              <br />
+              <input
+                type="checkbox"
+                id="nappi2"
+                name="nappi2"
+                value="Uutiskirje"
+              />
+              <label for="nappi2"
+                >Kyllä, haluan tilata uutiskirjeen ja saada sähköpostiini
+                uusimmat edut ja tarjoukset.
+              </label>
+              <br />
+              <a href="/thank-you-for-ordering.html" class="text-link">
+                Lähetä tilaus<i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </form>
+          </section>
+        </div>
       </div>
     </main>
 

@@ -98,6 +98,10 @@ body {
   font-weight: 650;
 }
 
+.shopping-cart-page {
+  padding: 25px;
+}
+
 .containers {
   background: var(--gradient);
   border-radius: 12px;

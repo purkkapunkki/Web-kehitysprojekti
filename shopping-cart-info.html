@@ -47,40 +47,53 @@
       </ul>
     </nav>
 
-    <main>
-      <li>
-        <a href="main.html" class="text-link">
-          <i class="fa-solid fa-arrow-left"></i>Keskeytä tilaus
-        </a>
-      </li>
-      <h1>Ostoskori</h1>
-      <li>
+    <main class="shopping-cart-page">
+      <div class="containers">
+        <li>
+          <a href="main.html" class="text-link">
+            <i class="fa-solid fa-arrow-left"></i>Keskeytä tilaus
+          </a>
+        </li>
+        <h1>Ostoskori</h1>
         <a href="shopping-cart-items.html" class="text-link">
           <i class="fa-solid fa-arrow-left"></i>Palaa tilauksesi sisältöön
         </a>
-      </li>
-      
-    <div class="containers grid-container">
-      <h2>Yhteystietosi & maksutavan valinta</h2>
+
+        <div class="grid-container">
           <section class="containers grid-column-1">
+            <h2>Yhteystietosi & maksutavan valinta</h2>
             <p>yhteystiedot</p>
             <form action="">
-              <input type="checkbox" id="nappi1" name="nappi1" value="maksutapa1" />
+              <input
+                type="checkbox"
+                id="nappi1"
+                name="nappi1"
+                value="maksutapa1"
+              />
               <label for="nappi1"
                 >Maksan verkossa, tilaukseni veloitetaan heti tilattuani.
               </label>
               <br />
-              <input type="checkbox" id="nappi2" name="nappi2" value="maksutapa2" />
+              <input
+                type="checkbox"
+                id="nappi2"
+                name="nappi2"
+                value="maksutapa2"
+              />
               <label for="nappi2"
                 >Maksan paikan päällä tilausta noutaessani.
               </label>
+            </form>
           </section>
 
           <section class="containers grid-column-2">
             <h3>Lasku</h3>
             <p>numeroita yms vatteja</p>
-            <button>Siirry eteenpäin<i class="fa-solid fa-arrow-right"></i></button>
+            <a href="/shopping-cart-confirmation.html" class="text-link">
+              Siirry eteenpäin<i class="fa-solid fa-arrow-right"></i>
+            </a>
           </section>
+        </div>
       </div>
     </main>
 
