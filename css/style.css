@@ -178,3 +178,16 @@ a:link {
   text-decoration: none;
   cursor: pointer;
 }
+
+/* Footer styles */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 10;
+  position: sticky;
+  bottom: 0;
+}

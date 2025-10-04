@@ -1,0 +1,69 @@
+/* ==============================
+   FORMS GENERAL STYLE
+   ============================== */
+.form-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  color: var(--black);
+  text-align: center;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: var(--red);
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-container label {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-container input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.form-container button {
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.form-container button:hover {
+  background: var(--brown);
+}
+
+/* Message area */
+.message {
+  margin-top: 20px;
+  color: green;
+  font-weight: bold;
+}
+
+/* ==============================
+   RESPONSIVE
+   ============================== */
+@media (max-width: 600px) {
+  .form-container {
+    margin: 40px 10px;
+    padding: 15px;
+  }
+}
