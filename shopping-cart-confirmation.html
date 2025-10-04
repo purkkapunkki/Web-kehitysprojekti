@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping-basket-info</title>
+    <title>Shopping-cart-confirmation</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/media-queries.css" />
     <link rel="stylesheet" href="css/hamburger-menu.css" />
@@ -39,7 +39,7 @@
           </a>
         </li>
         <li>
-          <a href="shopping-basket-items.html" class="menu-item">
+          <a href="shopping-cart-items.html" class="menu-item">
             <i class="fa-solid fa-xl fa-basket-shopping" title="Ostoskori"></i>
             <span class="menu-item-title">Ostoskori</span>
           </a>
@@ -55,32 +55,44 @@
       </li>
       <h1>Ostoskori</h1>
       <li>
-        <a href="shopping-basket-items.html" class="text-link">
-          <i class="fa-solid fa-arrow-left"></i>Palaa tilauksesi sisältöön
+        <a href="shopping-cart-info.html" class="text-link">
+          <i class="fa-solid fa-arrow-left"></i>Palaa Yheystietoihin &
+          maksuvalintaan
         </a>
       </li>
-      
-    <div class="containers grid-container">
-      <h2>Yhteystietosi & maksutavan valinta</h2>
-          <section class="containers grid-column-1">
-            <p>yhteystiedot</p>
-            <form action="">
-              <input type="checkbox" id="nappi1" name="nappi1" value="maksutapa1" />
-              <label for="nappi1"
-                >Maksan verkossa, tilaukseni veloitetaan heti tilattuani.
-              </label>
-              <br />
-              <input type="checkbox" id="nappi2" name="nappi2" value="maksutapa2" />
-              <label for="nappi2"
-                >Maksan paikan päällä tilausta noutaessani.
-              </label>
-          </section>
+      <div class="containers grid-container">
+        <h2>Tilauksesi yhteenveto</h2>
 
-          <section class="containers grid-column-2">
-            <h3>Lasku</h3>
-            <p>numeroita yms vatteja</p>
-            <button>Siirry eteenpäin<i class="fa-solid fa-arrow-right"></i></button>
-          </section>
+        <section class="containers grid-column-1">
+          <p>Tilatut itemit</p>
+          <p>yhteystiedot</p>
+          <p>maksutapa</p>
+        </section>
+
+        <section class="containers grid-column-2">
+          <h3>Lasku</h3>
+          <p>numeroita yms vatteja</p>
+          <form action="">
+            <input type="checkbox" id="nappi1" name="nappi1" value="Ehdot" />
+            <label for="nappi1"
+              >Kyllä, olen lukenut ehdot ja hyväksyn ne. pist tähä ku klikkaa ni
+              aukee dialogi ikkuna
+            </label>
+            <br />
+            <input
+              type="checkbox"
+              id="nappi2"
+              name="nappi2"
+              value="Uutiskirje"
+            />
+            <label for="nappi2"
+              >Kyllä, haluan tilata uutiskirjeen ja saada sähköpostiini uusimmat
+              edut ja tarjoukset.
+            </label>
+            <br />
+            <input type="submit" value="Lähetä tilaus" class="buttons" />
+          </form>
+        </section>
       </div>
     </main>
 
