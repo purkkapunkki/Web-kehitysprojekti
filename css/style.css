@@ -157,7 +157,7 @@ body {
   }
 }
 
-input[type="checkbox"] {
+input[type="radio"] {
   accent-color: var(--red);
 }
 
