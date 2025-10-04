@@ -22,6 +22,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+main {
+  padding: 25px;
+}
+
 @font-face {
   font-family: "Shinkai-Ink-Font";
   src: url("../fonts/ShinkaiInk-MAX2x.otf") format("opentype");
@@ -85,7 +89,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 25px;
-  margin: 25px;
+  margin-top: 25px;
 }
 
 #lunch-price {
@@ -98,10 +102,6 @@ body {
   font-weight: 650;
 }
 
-.shopping-cart-page {
-  padding: 25px;
-}
-
 .containers {
   background: var(--gradient);
   border-radius: 12px;
@@ -112,7 +112,6 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 25px;
-  margin: 25px;
 }
 
 .grid-column-1 {
