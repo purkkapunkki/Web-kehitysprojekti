@@ -84,8 +84,8 @@ body {
 #commercials {
   display: flex;
   flex-direction: column;
-  gap: 1em;
-  margin: 1em;
+  gap: 25px;
+  margin: 25px;
 }
 
 #lunch-price {
@@ -112,7 +112,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 25px;
-  margin: 1em;
+  margin: 25px;
 }
 
 .grid-column-1 {
