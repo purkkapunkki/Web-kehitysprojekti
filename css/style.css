@@ -197,12 +197,7 @@ main {
   padding-bottom: 2rem;
 }
 
-/* Sticky wrapper ensures footer respects both top & bottom */
-.sticky-wrapper {
-  position: sticky;
-  bottom: 0;
-  top: 0;
-}
+
 
 /* Footer styles */
 footer {

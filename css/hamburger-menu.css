@@ -13,13 +13,13 @@
   list-style-type: none;
   display: none;
 }
-.menu-item,
+.nav-item,
 .logo {
   text-decoration: none;
   color: var(--white);
 }
 
-.menu-item:hover {
+.nav-item:hover {
   text-decoration-line: underline;
 }
 /* Basic Styles Ends */

@@ -6,20 +6,53 @@
   <title>Rekisteröidy</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/forms.css">
-</head>
-<body>
-
-  <!-- Navigaatio -->
-  <nav class="navigation-bar">
-    <span class="toggle-button">&#9776;</span>
-    <a href="index.html" class="logo">Logo</a>
-    <ul class="main-menu">
-      <li><a href="index.html" class="menu-item">Etusivu</a></li>
-      <li><a href="menu.html" class="menu-item">Menu</a></li>
-      <li><a href="login.html" class="menu-item">Kirjaudu</a></li>
-      <li><a href="#" class="menu-item">Ostoskori</a></li>
-    </ul>
-  </nav>
+<link rel="stylesheet" href="css/media-queries.css" />
+    <link rel="stylesheet" href="css/hamburger-menu.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/690006849c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navigation-bar">
+      <span class="toggle-button"><i class="fa-solid fa-bars"></i></span>
+      <h1 id="restaurant-name">Ravintola</h1>
+      <ul class="main-menu">
+        <li>
+          <a href="main.html" class="nav-item">
+            <i class="fa-solid fa-xl fa-house-chimney" title="Etusivu"></i>
+            <span class="menu-item-title">Etusivu</span>
+          </a>
+        </li>
+        <li>
+          <a href="menu.html" class="nav-item">
+            <i class="fa-solid fa-xl fa-utensils" title="Ruokalista"></i>
+            <span class="menu-item-title">Ruokalista</span>
+          </a>
+        </li>
+        <li>
+          <a href="login.html" class="nav-item">
+            <i
+              class="fa-solid fa-xl fa-arrow-right-to-bracket"
+              title="Kirjaudu sisään"
+            ></i>
+            <span class="menu-item-title">Kirjaudu sisään</span>
+          </a>
+        </li>
+        <li>
+          <a href="shopping-basket-items.html" class="nav-item">
+            <i class="fa-solid fa-xl fa-basket-shopping" title="Ostoskori"></i>
+            <span class="menu-item-title">Ostoskori</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
   <!-- Rekisteröitymislomake -->
   <main class="form-container">
