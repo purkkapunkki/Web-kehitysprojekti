@@ -1,43 +1,30 @@
+header {
+  text-align: center;
+}
+
 .menu-page {
-  background: #ffffff;
+  background: var(--white);
   padding: 40px 20px;
   border-radius: 15px;
   margin: 30px auto;
   max-width: 1200px;
   text-align: center;
+
+  h2 {
+    color: var(--black);
+    font-size: 2rem;
+    margin: 40px 0 20px;
+  }
 }
 
-/* Otsikot (Ruoat, Juomat, Jälkiruoat) */
-.menu-section h2 {
-  color: black;
-  font-size: 2rem;
-  margin: 40px 0 20px;
-}
-
-/* Yleinen grid-tyyli kaikille osille */
 .menu-grid {
   display: grid;
   gap: 20px;
   justify-items: center;
   margin-bottom: 50px;
-}
-
-/* Ruokien grid → 3x5 (15 paikkaa) alustavasti */
-.foods-grid {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-/* Juomien grid → 3x2 (6 paikkaa) alustavasti */
-.drinks-grid {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-/* Jälkiruokien grid → 3x1 (3 paikkaa) alustavasti */
-.desserts-grid {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-/* Yksittäinen menu-kortti */
 .menu-item {
   background: whitesmoke;
   border-radius: 15px;
@@ -46,37 +33,24 @@
   transition: transform 0.2s ease;
   width: 100%;
   max-width: 300px;
+
+  img {
+    display: block;
+    margin: 0 auto 15px auto;
+  }
+
+  h3 {
+    margin: 15px 0 10px;
+    color: var(--black);
+  }
+
+  p {
+    color: var(--black);
+  }
 }
 
-.menu-item:hover {
-  transform: scale(1.03);
-}
-
-/* Kuva kortissa */
-.menu-item img {
-  width: 100%;
-  border-radius: 10px;
-  max-width: 250px;
-  height: auto;
-  display: block;
-  margin: 0 auto 15px auto;
-}
-
-/* Ruokalajin otsikko */
-.menu-item h3 {
-  margin: 15px 0 10px;
-  color: black;
-}
-
-/* Ruokalajin kuvaus */
-.menu-item p {
-  color: #000000;
-}
-
-/* Hinta */
 .price {
-  display: inline-block;
   margin-top: 10px;
   font-weight: bold;
-  color: rgb(0, 0, 0);
+  color: var(--black);
 }

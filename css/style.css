@@ -79,7 +79,7 @@ main {
   }
 }
 
-.lunch-sale-img {
+.round-image {
   clip-path: circle(50% at 50% 50%);
   width: 200px;
   height: 200px;
@@ -180,15 +180,9 @@ a:link {
   cursor: pointer;
 }
 
-/* Footer styles */
 footer {
-  background: #222;
-  color: #fff;
+  background: var(--red);
+  color: var(--white);
   text-align: center;
   padding: 1rem;
-  font-size: 1.2rem;
-  font-weight: bold;
-  z-index: 10;
-  position: sticky;
-  bottom: 0;
 }
