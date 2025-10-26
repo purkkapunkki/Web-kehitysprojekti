@@ -1,7 +1,7 @@
 :root {
   --red: rgb(220, 20, 60);
   --brown: rgb(181, 150, 101);
-  --black: rgb(40, 40, 40);
+  --black: rgb(25, 26, 26);
   --white: rgb(255, 255, 255);
   --light-blue-gray: rgb(156, 188, 200);
   --gradient: linear-gradient(
@@ -9,6 +9,7 @@
     var(--white),
     var(--light-blue-gray)
   );
+  --dark-gray: #172125;
 }
 
 * {
@@ -181,7 +182,7 @@ a:link {
 }
 
 footer {
-  background: var(--red);
+  background: var(--dark-gray);
   color: var(--white);
   text-align: center;
   padding: 1rem;
