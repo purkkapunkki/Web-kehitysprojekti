@@ -4,7 +4,7 @@ body {
 
 .navigation-bar {
   font-size: 18px;
-  background-color: var(--red);
+  background-color: var(--dark-gray);
   padding: 10px 10px;
   position: sticky;
   top: 0;
