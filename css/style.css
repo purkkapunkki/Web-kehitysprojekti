@@ -37,6 +37,10 @@ main {
   line-height: 1;
 }
 
+nav h1 {
+  color: var(--white);
+}
+
 #logo {
   clip-path: circle(50% at 50% 50%);
   width: 40%;
