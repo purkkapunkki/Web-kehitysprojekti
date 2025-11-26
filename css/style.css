@@ -114,14 +114,25 @@ nav h1 {
   gap: 25px;
 }
 
-#socialmedia-icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
+#footer-restaurant-information {
+  flex: 1;
 }
 
-#socialmedia-icons i {
+#footer-social-media {
+  flex: 1;
+}
+
+#footer-api-map {
+  flex: 1;
+}
+
+#social-media-icons {
+  display: flex;
+  gap: 0.5em;
+  margin-top: 1.4em;
+}
+
+#social-media-icons i {
   cursor: pointer;
   transition: 0.2s ease-in-out;
   &:hover {
@@ -205,15 +216,17 @@ footer {
   color: var(--white);
   padding: 1rem;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: row;
-  gap: 0.5em;
+  justify-content: center;
+  align-items: baseline;
+  align-content: center;
+  gap: 1em;
+  flex-grow: inherit;
   h1 {
     font-size: 1.2em;
+    font-weight: 500;
     margin-bottom: 0.5em;
   }
-  div {
+  section {
     margin-bottom: 0.5em;
   }
 }
