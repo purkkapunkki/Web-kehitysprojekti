@@ -142,6 +142,25 @@ nav h1 {
   }
 }
 
+#item-quantity {
+  display: flex;
+  gap: 0.3em;
+  padding: 1em;
+  button,
+  input {
+    border: none;
+    border-radius: 3px;
+    padding: 3px;
+    background-color: var(--white);
+  }
+  button {
+    cursor: pointer;
+  }
+  input {
+    width: 5%;
+  }
+}
+
 .containers {
   background: var(--gradient);
   border-radius: 12px;
