@@ -9,6 +9,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 1;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 .main-menu {
   list-style-type: none;

@@ -214,9 +214,11 @@ a:link {
 footer {
   background: var(--dark-gray);
   color: var(--white);
-  padding: 1rem;
+  padding: 1.2rem;
   display: flex;
   gap: 1em;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   h1 {
     font-size: 1.2em;
     font-weight: 500;
