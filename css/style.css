@@ -197,6 +197,19 @@ nav h1 {
   }
 }
 
+.items-in-shopping-cart-badge:after {
+  content: attr(value);
+  font-size: 18px;
+  color: var(--white);
+  background: var(--red);
+  border-radius: 50%;
+  padding: 0 9px;
+  position: relative;
+  left: -8px;
+  top: -10px;
+  opacity: 0.9;
+}
+
 input[type="radio"],
 input[type="checkbox"] {
   accent-color: var(--red);
