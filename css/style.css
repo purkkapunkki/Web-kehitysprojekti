@@ -38,8 +38,9 @@ main {
   line-height: 1;
 }
 
-nav h1 {
+nav a {
   color: var(--white);
+  text-decoration: none;
 }
 
 #logo {
