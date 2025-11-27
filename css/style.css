@@ -10,6 +10,7 @@
     var(--light-blue-gray)
   );
   --dark-gray: #172125;
+  --white-transparent: rgb(242, 240, 240, 0.5);
 }
 
 * {
@@ -43,8 +44,8 @@ nav h1 {
 
 #logo {
   clip-path: circle(50% at 50% 50%);
-  width: 40%;
-  height: 40%;
+  width: 50%;
+  height: 50%;
 }
 
 #hero-image {
@@ -73,7 +74,6 @@ nav h1 {
   }
   h3 {
     color: var(--dark-gray);
-    font-size: 1.5em;
     font-weight: 600;
   }
   p {
@@ -161,6 +161,12 @@ nav h1 {
   }
 }
 
+#light-hero-text-box {
+  background-color: var(--white-transparent);
+  border-radius: 30px;
+  padding: 1em;
+}
+
 .containers {
   background: var(--gradient);
   border-radius: 12px;
@@ -241,8 +247,10 @@ li {
 }
 
 a:link {
-  text-decoration: none;
   cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 footer {
