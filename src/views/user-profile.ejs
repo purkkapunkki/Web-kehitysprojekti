@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User-profile</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/media-queries.css" />
+    <script
+      src="https://kit.fontawesome.com/690006849c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <%- include('partials/navigation-bar.ejs') %>
+
+    <main>
+      <section class="containers grid-container">
+        <h1>Käyttäjän profiili</h1>
+        <div class="containers grid-column-1">
+          <h2>Käyttäjän tiedot</h2>
+          <hr />
+          <p>Nimi:</p>
+          <p>Sähköposti:</p>
+          <br />
+          <h2>Muokkaa henkilötietoja</h2>
+          <button class="buttons">
+            <i class="fa-solid fa-pencil" title="Muokkaa henkilötietoja"></i>
+          </button>
+        </div>
+
+        <div class="containers grid-column-2">
+          <h2>Tilaukseni</h2>
+          <hr />
+          <% for (order of orders) { %>
+          <p>
+            Tilaus <%= order.restaurant_order_id %>: <%=
+            order.restaurant_order_status %>
+          </p>
+          <% } %>
+        </div>
+      </section>
+    </main>
+
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping cart info</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/media-queries.css" />
+    <script
+      src="https://kit.fontawesome.com/690006849c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <%- include('partials/navigation-bar.ejs') %>
+
+    <main>
+      <div class="containers">
+        <a href="/" class="text-link"> Keskeytä tilaus </a>
+        <h1 id="cart-h1">Ostoskori</h1>
+        <a href="/order/cart-items" class="text-link">
+          Palaa tilauksesi sisältöön
+        </a>
+
+        <div class="grid-container">
+          <section class="containers grid-column-1">
+            <h2>Yhteystietosi & maksutavan valinta</h2>
+            <hr />
+            <p id="customer-info">yhteystiedot</p>
+            <form action="">
+              <input
+                type="radio"
+                id="nappi1"
+                name="valinta"
+                value="maksutapa1"
+              />
+              <label for="nappi1"
+                >Maksan verkossa, tilaukseni veloitetaan heti tilattuani.
+              </label>
+              <br />
+              <input
+                type="radio"
+                id="nappi2"
+                name="valinta"
+                value="maksutapa2"
+              />
+              <label for="nappi2"
+                >Maksan paikan päällä tilausta noutaessani.
+              </label>
+            </form>
+          </section>
+
+          <section class="containers grid-column-2">
+            <h2>Lasku</h2>
+            <hr />
+            <p id="customer-check">numeroita yms vatteja</p>
+            <a href="/order/order-confirmation" class="text-link">
+              Siirry eteenpäin
+            </a>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruokalista</title>
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/media-queries.css" />
+    <link rel="stylesheet" href="/css/menu-css/menu-page-general.css" />
+    <link rel="stylesheet" href="/css/hamburger-menu.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/690006849c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/shopping-cart.js" defer></script>
+  </head>
+  <body>
+    <%- include('partials/navigation-bar.ejs') %>
+
+    <header>
+      <h1>Ruokalista</h1>
+    </header>
+
+    <main class="menu-page">
+      <section class="menu-section">
+        <h2>Ruoat</h2>
+        <div class="menu-grid">
+          <% for (product of foodProducts) { %> <%-
+          include('partials/product-card.ejs') %> <% } %>
+        </div>
+      </section>
+
+      <section class="menu-section">
+        <h2>Juomat</h2>
+        <div class="menu-grid">
+          <% for (product of drinkProducts) { %> <%-
+          include('partials/product-card.ejs') %> <% } %>
+        </div>
+      </section>
+
+      <section class="menu-section">
+        <h2>Jälkiruoat</h2>
+        <div class="menu-grid">
+          <% for (product of dessertProducts) { %> <%-
+          include('partials/product-card.ejs') %> <% } %>
+        </div>
+      </section>
+    </main>
+
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

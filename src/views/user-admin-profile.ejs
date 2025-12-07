@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin-profile</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/media-queries.css" />
+    <script
+      src="https://kit.fontawesome.com/690006849c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <%- include('partials/navigation-bar.ejs') %>
+
+    <main>
+      <section class="containers grid-container">
+        <h1>Admin profiili</h1>
+        <div class="containers grid-column-1">
+          <h2>Asiakkaiden tilaukset</h2>
+          <hr />
+        </div>
+        <div class="containers grid-column-2">
+          <h2>Muokkaa ruokalistaa</h2>
+          <hr />
+          <button class="buttons">
+            <i class="fa-solid fa-pencil" title="Muokkaa ruokalistaa"></i>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

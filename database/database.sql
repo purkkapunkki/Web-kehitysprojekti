@@ -75,19 +75,30 @@ CREATE TABLE Restaurant_order_product (
 -- Insert Users
 INSERT INTO User (first_name, last_name, email, password, is_admin)
 VALUES 
-('Matti', 'Meikäläinen', 'matti.meikalainen@example.com', 'salasana123', FALSE),
-('Liisa', 'Virtanen', 'liisa.virtanen@example.com', 'salasana456', FALSE),
-('Aleksi', 'Nieminen', 'aleksi.nieminen@example.com', 'adminsalasana', TRUE),
-('Sanna', 'Korhonen', 'sanna.korhonen@example.com', 'salasanani', FALSE);
+('Loki', 'Laufeyjarson', 'loki.laufeyjarson@hveralundr.com', 'Pistänsappeasimaan098', FALSE),
+('Býleistur', 'Fárbautison', 'býleistur.fárbautison@valhöll.com', 'Mysteerihenkilö456', FALSE),
+('Þór', 'Óðinson', 'þór.óðinson@ásgarður.com', 'Käärmeentappaja123', FALSE),
+('Admin', 'Käyttäjä', 'admin.kayttaja@example.com', 'adminsalasana0', TRUE),
+('Anomuumi', 'Laaksolainen', 'anomuumi.laaksolainen@muumilaakso.fi', 'salasana000', FALSE);
 
 -- Insert Products
 INSERT INTO Product (name, image, price, description, product_class)
 VALUES 
-('Karjalanpiirakka', 'karjalanpiirakka.jpg', 3.50, 'Perinteinen suomalainen karjalanpiirakka.', 'ruoka'),
-('Lohikeitto', 'lohikeitto.jpg', 11.00, 'Kermainen lohikeitto tuoreilla yrteillä.', 'ruoka'),
-('Ruisleipä', 'ruisleipa.jpg', 2.00, 'Maukasta ruisleipää suomalaisesta rukiista.', 'ruoka'),
-('Marjamehu', 'marjamehu.jpg', 4.00, 'Tuoreista marjoista valmistettu mehu.', 'juoma'),
-('Korvapuusti', 'korvapuusti.jpg', 2.50, 'Cinnamon-sokerikanelipullat.', 'jälkiruoka');
+('Taiyaki (Adzukipaputäyte)', 'taiyaki-punapapu.jpg', 3.50, 'Vohvelitaikinaleivos punapaputäytteellä.', 'jälkiruoka'),
+('Taiyaki (Suklaatäyte)', 'taiyaki-suklaa.jpg', 3.50, 'Vohvelitaikinaleivos suklaatäytteellä.', 'jälkiruoka'),
+('Taiyaki (Vaniljatäyte)', 'taiyaki-vanilja.jpg', 3.50, 'Vohvelitaikinaleivos vaniljatäytteellä.', 'jälkiruoka'),
+('Kappamaki', 'kappamaki.jpg', 9.00, 'Kurkkusushi 8 kpl.', 'ruoka'),
+('Nigiri (Lohi)', 'nigiri-lohi.jpg', 9.00, 'Lohi nigirisushi 8 kpl.', 'ruoka'),
+('Nigiri (Tonnikala)', 'nigiri-tonnikala.jpg', 9.00, 'Tonnikala nigirisushi 8 kpl.', 'ruoka'),
+('Tonkatsu', 'tonkatsu.jpg', 12.50, 'Friteerattua possua tonkatsu kastikkeella.', 'ruoka'),
+('Yakitori', 'yakitori.jpg', 9.50, 'Grillattua kanaa vartaassa kastikkeella.', 'ruoka'),
+('Onigiri (Tonnikalamajoneesi)', 'onigiri-tonnikala.jpg', 3.50, 'Riisipallo, jossa tonnikalamajoneesitäyte.', 'ruoka'),
+('Onigiri (Lohi)', 'onigiri-lohi.jpg', 3.50, 'Riisipallo, jossa lohitäyte.', 'ruoka'),
+('Novelle kivennäisvesi', 'novelle.jpg', 2.99, 'Kivennäisvesi (500ml).', 'juoma'),
+('Fanta Melonilimu', 'fanta-meloni.jpg', 3.99, 'Melonilimu (500ml).', 'juoma'),
+('Fanta Viinirypälelimu', 'fanta-rypäle.jpg', 3.99, 'Viinirypälelimu (500ml).', 'juoma'),
+('Fanta Persikkalimu', 'fanta-persikka.jpg', 3.99, 'Persikkalimu (500ml).', 'juoma'),
+('Oshiruko', 'adzukipapukeitto.jpg', 2.50, 'Punapapukeitto.', 'jälkiruoka');
 
 -- Insert Allergens
 INSERT INTO Allergen (name)
@@ -95,25 +106,23 @@ VALUES
 ('Pähkinät'),
 ('Gluteenit'),
 ('Maito'),
-('Äyriäiset'),
-('Soija');
+('Kananmuna');
 
 -- Insert Product Allergen Associations
 INSERT INTO Product_allergen (allergen_id, product_id)
 VALUES 
-(1, 1),  -- Karjalanpiirakka contains Pähkinät
-(2, 1),  -- Karjalanpiirikka contains Gluteenit
-(3, 2),  -- Lohikeitto contains Maito
-(2, 3),  -- Ruisleipä contains Gluteenit
-(4, 4)  -- Marjamehu contains Äyriäiset
-
--- Insert to Favorite Products
-INSERT INTO Favorite_product (product_id, user_id)
-VALUES 
-(1, 1),  -- Matti suosii Karjalanpiirikkaa
-(2, 2),  -- Liisa suosii Lohikeittoa
-(3, 3),  -- Aleksi suosii Ruisleipää
-(4, 4);  -- Sanna suosii Marjamehua
+(3, 1),
+(3, 2),
+(3, 3),
+(3, 9),
+(2, 1),
+(2, 2),
+(2, 3),
+(4, 1),
+(4, 2),
+(4, 3),
+(4, 7),
+(4, 9);
 
 -- Insert into Shopping Cart
 INSERT INTO Shopping_cart (user_id)
@@ -122,6 +131,17 @@ VALUES
 (2),
 (3),
 (4);
+
+-- Exit here, bad things below
+exit;
+
+-- Insert to Favorite Products
+INSERT INTO Favorite_product (product_id, user_id)
+VALUES 
+(1, 1),  -- Matti suosii Karjalanpiirikkaa
+(2, 2),  -- Liisa suosii Lohikeittoa
+(3, 3),  -- Aleksi suosii Ruisleipää
+(4, 4);  -- Sanna suosii Marjamehua
 
 -- Insert into Shopping Cart Products
 INSERT INTO Shopping_cart_product (shopping_cart_id, product_id, quantity)

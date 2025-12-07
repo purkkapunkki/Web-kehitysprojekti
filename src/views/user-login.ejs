@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kirjaudu sisään</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/forms.css" />
+    <link rel="stylesheet" href="/css/media-queries.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/690006849c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <%- include('partials/navigation-bar.ejs') %>
+
+    <main class="authentication-form-container containers">
+      <h2>Kirjaudu sisään</h2>
+      <form method="POST" id="login-form">
+        <label for="email">Sähköposti</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">Salasana</label>
+        <input type="password" id="password" name="password" required />
+
+        <%- include('partials/form-errors.ejs') %>
+
+        <button type="submit" class="buttons">Kirjaudu</button>
+      </form>
+
+      <p>
+        Eikö sinulla ole vielä tiliä?
+        <a href="/user/register" class="text-link">Rekisteröidy tästä</a>
+      </p>
+    </main>
+
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

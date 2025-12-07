@@ -1,0 +1,61 @@
+<nav class="navigation-bar">
+  <link rel="stylesheet" href="/css/hamburger-menu.css" />
+
+  <span class="toggle-button"><i class="fa-solid fa-bars"></i></span>
+  <h1 id="restaurant-name"><a href="/">Shinkai</a></h1>
+  <ul class="main-menu">
+    <li>
+      <a href="/" class="nav-item">
+        <i class="fa-solid fa-xl fa-house-chimney" title="Etusivu"></i>
+        <span class="menu-item-title">Etusivu</span>
+      </a>
+    </li>
+    <li>
+      <a href="/menu/menu" class="nav-item">
+        <i class="fa-solid fa-xl fa-utensils" title="Ruokalista"></i>
+        <span class="menu-item-title">Ruokalista</span>
+      </a>
+    </li>
+    <% if (locals.user) { %>
+    <li id="logout-menu-item">
+      <a href="/user/logout" class="nav-item">
+        <i
+          class="fa-solid fa-xl fa-arrow-right-from-bracket"
+          title="Kirjaudu ulos"
+        ></i>
+        <span class="menu-item-title">Kirjaudu ulos</span>
+      </a>
+    </li>
+    <li id="user-profile">
+      <a href="/user/profile" class="nav-item">
+        <i class="fa-solid fa-xl fa-user" title="Profiili"></i>
+        <span class="menu-item-title">Profiili</span>
+      </a>
+    </li>
+    <% } else { %>
+    <li id="login-menu-item">
+      <a href="/user/login" class="nav-item">
+        <i
+          id="login-icon"
+          class="fa-solid fa-xl fa-arrow-right-to-bracket"
+          title="Kirjaudu sisään"
+        ></i>
+        <span class="menu-item-title">Kirjaudu sisään</span>
+      </a>
+    </li>
+    <% } %>
+    <li>
+      <a href="/order/cart-items" class="nav-item">
+        <i
+          id="items-in-shopping-cart-badge"
+          class="fa-solid fa-xl fa-basket-shopping"
+          title="Ostoskori"
+          data-value="<%= locals.shoppingCartProducts.length %>"
+        ></i>
+        <span class="menu-item-title">Ostoskori</span>
+      </a>
+    </li>
+  </ul>
+
+  <script src="/js/hamburger-menu.js" defer></script>
+</nav>

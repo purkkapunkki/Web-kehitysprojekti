@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping cart items</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/media-queries.css" />
+    <script src="/js/shopping-cart.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/690006849c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <%- include('partials/navigation-bar.ejs') %>
+
+    <main>
+      <div class="containers">
+        <a href="/" class="text-link"> Keskeytä tilaus </a>
+        <h1 id="cart-h1">Ostoskori</h1>
+
+        <div class="grid-container">
+          <section class="containers grid-column-1">
+            <h2>Tilauksesi</h2>
+            <hr />
+            <p
+              id="no-products-message"
+              class="<%= shoppingCartProducts.length === 0 ? '' : 'hidden' %>"
+            >
+              Ei tuotteita
+            </p>
+            <% for (product of shoppingCartProducts) { %>
+            <div class="shopping-cart-product-container">
+              <p><%= product.name %> - <%= product.price %> €</p>
+              <button class="plus-button" type="button" name="button">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <input
+                type="text"
+                name="quantity"
+                value="<%= product.quantity %>"
+              />
+              <button class="minus-button" type="button" name="button">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <button
+                class="remove-from-shopping-cart"
+                type="button"
+                name="button"
+                data-product-id="<%= product.product_id %>"
+                data-price="<%= product.price %>"
+              >
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+            <% } %>
+          </section>
+
+          <section class="containers grid-column-2">
+            <h2>Lasku</h2>
+            <hr />
+            <p id="customer-check">
+              Kokonaishinta:
+              <span id="total-price"><%= cartTotalPrice %></span> €
+            </p>
+            <a href="/order/cart-info" class="text-link"> Siirry eteenpäin </a>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

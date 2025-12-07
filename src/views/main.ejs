@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/media-queries.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/690006849c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/shopping-cart.js" defer></script>
+  </head>
+  <body>
+    <%- include('partials/navigation-bar.ejs') %>
+
+    <main>
+      <% if (locals.user) { %> Hei, <%= user.firstName %>! <% } %>
+      <article id="hero-image">
+        <section id="hero-text">
+          <img src="img/sushilogo.png" alt="logo" id="logo" />
+          <h1 id="restaurant-name">Shinkai</h1>
+
+          <div id="light-hero-text-box">
+            <p>
+              Japanilainen ravintola <br />
+              Shinkai,
+            </p>
+            <h3>Tervetuloa!</h3>
+
+            <br />
+            <a href="/menu/menu" class="text-link"> Katso ruokalistaa </a>
+          </div>
+        </section>
+      </article>
+
+      <article id="commercials">
+        <section class="containers commercial-container">
+          <h1>Vain tänään!</h1>
+          <h2>Tämän päivän lounasetu -10%</h2>
+          <img
+            src="img/kappamaki.jpg"
+            alt="kuva kappamakista"
+            class="round-image"
+          />
+          <h3>Kappamaki</h3>
+          <p>Kuvaus</p>
+          <p id="lunch-price">8,99&euro;</p>
+          <p id="sale-lunch-price">8,99&euro;</p>
+          <button class="buttons">Lisää ostoskoriin</button>
+        </section>
+
+        <section class="containers commercial-container">
+          <h1>Tämän viikon tarjous!</h1>
+          <h2>Ostamalla aterian mukana juoman säästät -5%</h2>
+          <div id="combo-offer">
+            <div>
+              <img
+                src="img/nigiri-lohi.jpg"
+                alt="kuva lohinigiristä"
+                class="round-image"
+              />
+
+              <i class="fa-solid fa-plus"></i>
+
+              <h3>Lohi nigiri</h3>
+              <p id="lunch-price">8,99&euro;</p>
+              <p id="sale-lunch-price">8,99&euro;</p>
+              <button class="buttons">Lisää ostoskoriin</button>
+            </div>
+            <div>
+              <img
+                src="img/novelle.jpg"
+                alt="kuva novelle kivennäisvedestä"
+                class="round-image"
+              />
+              <h3>Novelle kivennäisvesi</h3>
+              <p id="lunch-price">2,99&euro;</p>
+              <p id="sale-lunch-price">2,99&euro;</p>
+              <button class="buttons">Lisää ostoskoriin</button>
+            </div>
+          </div>
+        </section>
+      </article>
+    </main>
+
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

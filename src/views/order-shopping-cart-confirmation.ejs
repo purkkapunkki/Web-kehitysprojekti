@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping cart confirmation</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/media-queries.css" />
+    <script src="/js/send-order.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/690006849c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <%- include('partials/navigation-bar.ejs') %>
+
+    <main>
+      <div class="containers">
+        <a href="/" class="text-link"> Keskeytä tilaus </a>
+        <h1 id="cart-h1">Ostoskori</h1>
+        <a href="/order/cart-info" class="text-link">
+          Palaa yhteystietoihin & maksutavan valintaan
+        </a>
+
+        <div class="grid-container">
+          <section class="containers grid-column-1">
+            <h2>Tilauksesi yhteenveto</h2>
+            <hr />
+            <div id="customer-info">
+              <p>Tilatut itemit</p>
+              <p>yhteystiedot</p>
+              <p>maksutapa</p>
+            </div>
+          </section>
+
+          <section class="containers grid-column-2">
+            <h2>Lasku</h2>
+            <hr />
+            <p id="customer-check">numeroita yms vatteja</p>
+            <form action="">
+              <input
+                type="checkbox"
+                id="nappi2"
+                name="nappi2"
+                value="Uutiskirje"
+              />
+              <label for="nappi2"
+                >Kyllä, haluan tilata uutiskirjeen ja saada sähköpostiini
+                uusimmat edut ja tarjoukset.
+              </label>
+              <br />
+              <button id="send-order" class="buttons">Lähetä tilaus</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <%- include('partials/footer.ejs') %>
+  </body>
+</html>

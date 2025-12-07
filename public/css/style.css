@@ -1,0 +1,306 @@
+:root {
+  --red: rgb(220, 20, 60);
+  --brown: rgb(181, 150, 101);
+  --black: rgb(25, 26, 26);
+  --white: rgb(255, 255, 255);
+  --light-blue-gray: rgb(156, 188, 200);
+  --gradient: linear-gradient(
+    to bottom right,
+    var(--white),
+    var(--light-blue-gray)
+  );
+  --dark-gray: #172125;
+  --white-transparent: rgb(242, 240, 240, 0.5);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  padding: 25px;
+}
+
+@font-face {
+  font-family: "Shinkai-Ink-Font";
+  src: url("../fonts/ShinkaiInk-MAX2x.otf") format("opentype");
+}
+
+#restaurant-name {
+  font-family: "Shinkai-Ink-Font", sans-serif;
+  line-height: 1;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+#logo {
+  clip-path: circle(50% at 50% 50%);
+  width: 50%;
+  height: 50%;
+}
+
+#hero-image {
+  background-color: var(--light-gray);
+  background-image: url("../img/tausta.jpg");
+  height: 115vh;
+  width: 100%;
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+#hero-text {
+  text-align: center;
+  position: absolute;
+  /* Magic 🪄 */
+  top: calc(50% + 127px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+  h1 {
+    font-size: 3em;
+    line-height: 1.5;
+  }
+  h3 {
+    color: var(--dark-gray);
+    font-weight: 600;
+  }
+  p {
+    color: var(--dark-gray);
+    font-size: 1em;
+    font-weight: 600;
+  }
+  a {
+    font-weight: 550;
+  }
+}
+
+.round-image {
+  clip-path: circle(50% at 50% 50%);
+  width: 200px;
+  height: 200px;
+}
+
+#commercials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+#lunch-price {
+  text-decoration-line: line-through;
+}
+
+#sale-lunch-price {
+  color: var(--red);
+  font-size: 2em;
+  font-weight: 650;
+}
+
+#combo-offer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+#footer-restaurant-information {
+  flex: 1;
+}
+
+#footer-social-media {
+  flex: 1;
+}
+
+#footer-api-map {
+  flex: 1;
+}
+
+#social-media-icons {
+  display: flex;
+  gap: 0.5em;
+  margin-top: 1.4em;
+}
+
+#social-media-icons i {
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transform: translateY(-0.2rem);
+  }
+}
+
+.shopping-cart-product-container {
+  display: flex;
+  gap: 0.3em;
+  padding: 1em;
+  button,
+  input {
+    border: none;
+    border-radius: 3px;
+    padding: 3px;
+    background-color: var(--white);
+  }
+  button {
+    cursor: pointer;
+  }
+  input {
+    width: 5%;
+  }
+}
+
+#light-hero-text-box {
+  background-color: var(--white-transparent);
+  border-radius: 30px;
+  padding: 1em;
+}
+
+#error-message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#error-image {
+  display: block;
+  width: 30%;
+  height: 30%;
+}
+
+#product-name-text {
+  font-weight: 500;
+}
+
+#allergen-text {
+  font-size: 0.7em;
+}
+
+.hidden {
+  display: none;
+}
+
+.containers {
+  background: var(--gradient);
+  border-radius: 12px;
+  padding: 2em;
+  #customer-info,
+  #customer-check {
+    margin: 10px 0 10px 0;
+  }
+}
+
+#cart-h1 {
+  margin: 10px 0 10px 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.grid-column-1 {
+  grid-column: 1;
+}
+
+.grid-column-2 {
+  grid-column: 1;
+}
+
+.commercial-container {
+  flex-grow: 1;
+  h1 {
+    color: var(--red);
+    font-weight: 500;
+  }
+}
+
+.center {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.buttons {
+  cursor: pointer;
+  background-color: var(--red);
+  color: var(--white);
+  font-size: 1em;
+  border-radius: 30px;
+  padding: 0.5em;
+  border: solid 3px var(--red);
+  &:hover {
+    box-shadow: 0 0 10px var(--red);
+  }
+}
+
+.text-link {
+  color: var(--red);
+}
+
+.main-menu li {
+  transition: 0.2s ease-in-out;
+  &:hover {
+    transform: translateY(-0.2rem);
+  }
+}
+
+#items-in-shopping-cart-badge:after {
+  content: attr(data-value);
+  font-size: 18px;
+  color: var(--white);
+  background: var(--red);
+  border-radius: 50%;
+  padding: 0 9px;
+  position: relative;
+  left: -8px;
+  top: -10px;
+  opacity: 0.9;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--red);
+}
+
+li {
+  list-style-type: none;
+}
+
+a:link {
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+footer {
+  background: var(--dark-gray);
+  color: var(--white);
+  padding: 1.2rem;
+  display: flex;
+  gap: 1em;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  h1 {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-bottom: 0.5em;
+  }
+  section {
+    margin-bottom: 0.5em;
+  }
+}
