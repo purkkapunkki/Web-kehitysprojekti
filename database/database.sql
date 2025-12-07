@@ -2,6 +2,10 @@ DROP DATABASE IF EXISTS restaurant_site;
 CREATE DATABASE restaurant_site;
 USE restaurant_site;
 
+ CREATE USER 'restaurant_user'@'localhost' IDENTIFIED BY 'supersalainen';
+ GRANT ALL PRIVILEGES ON `restaurant_site`.* TO 'restaurant_user'@'localhost';
+ FLUSH PRIVILEGES;
+
 CREATE TABLE User (
   user_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
   first_name VARCHAR(255) NOT NULL,
