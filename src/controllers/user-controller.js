@@ -3,7 +3,10 @@ import { validationResult } from "express-validator";
 
 import { createUser, checkIfUserExists } from "../models/user-model.js";
 import { createShoppingCart } from "../models/shopping-cart-model.js";
-import { getAllOrders } from "../models/restaurant-order-model.js";
+import {
+  getAllOrders,
+  getAllOrdersForUser,
+} from "../models/restaurant-order-model.js";
 
 /**
  * Show the user register page.
@@ -67,7 +70,13 @@ const registerUser = async (req, res, next) => {
       error.status = shoppingCartResult.status;
       return next(error);
     }
-    req.session.user = { id: result.userId, firstName: firstName };
+    req.session.user = {
+      id: result.userId,
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      isAdmin: isAdmin,
+    };
     res.redirect("/");
   } else {
     res.status(result.status);
@@ -105,7 +114,13 @@ const loginUser = async (req, res, next) => {
   const password = req.body["password"];
   const result = await checkIfUserExists(email, password);
   if (!result.error) {
-    req.session.user = { id: result.user_id, firstName: result.first_name };
+    req.session.user = {
+      id: result.user_id,
+      firstName: result.first_name,
+      lastName: result.last_name,
+      email: result.email,
+      isAdmin: result.is_admin,
+    };
     res.redirect("/");
   } else {
     res.status(result.status);
@@ -120,12 +135,16 @@ const loginUser = async (req, res, next) => {
  * @param {express.NextFunction} next next middleware function
  */
 const userProfile = async (req, res, next) => {
-  const result = await getAllOrders(req.session.user.id);
+  if (req.session.user.isAdmin) {
+    return res.redirect("/user/admin-profile");
+  }
+  const result = await getAllOrdersForUser(req.session.user.id);
   if (result.error) {
     const error = new Error(result.error);
     error.status = result.status;
     return next(error);
   }
+
   res.render("user-profile", { orders: result });
 };
 
@@ -136,7 +155,18 @@ const userProfile = async (req, res, next) => {
  * @param {express.NextFunction} next next middleware function
  */
 const userAdminProfile = async (req, res, next) => {
-  res.render("user-admin-profile");
+  try {
+    const orderResult = await getAllOrders();
+    if (orderResult.error) {
+      const error = new Error(orderResult.error);
+      error.status = orderResult.status;
+      return next(error);
+    }
+
+    res.render("user-admin-profile", { orders: orderResult });
+  } catch (error) {
+    next(error);
+  }
 };
 
 /**

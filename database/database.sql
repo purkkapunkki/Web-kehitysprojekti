@@ -134,50 +134,6 @@ VALUES
 (1),
 (2),
 (3),
-(4);
+(4),
+(5);
 
--- Exit here, bad things below
-exit;
-
--- Insert to Favorite Products
-INSERT INTO Favorite_product (product_id, user_id)
-VALUES 
-(1, 1),  -- Matti suosii Karjalanpiirikkaa
-(2, 2),  -- Liisa suosii Lohikeittoa
-(3, 3),  -- Aleksi suosii Ruisleipää
-(4, 4);  -- Sanna suosii Marjamehua
-
--- Insert into Shopping Cart Products
-INSERT INTO Shopping_cart_product (shopping_cart_id, product_id, quantity)
-VALUES 
-(1, 1, 2),  -- Matti has 2 Karjalanpiirikkaa
-(1, 2, 1),  -- Matti has 1 Lohikeitto
-(2, 3, 1),  -- Liisa has 1 Ruisleipä
-(3, 4, 1);  -- Aleksi has 1 Marjamehu
-
--- Insert Restaurant Orders
-INSERT INTO Restaurant_order (user_id, restaurant_order_status)
-VALUES 
-(1, 'complete'),         -- 'Completed'
-(2, 'pending'),          -- 'Pending'
-(3, 'pending'),          -- 'Pending'
-(4, 'in progress');      -- 'In Progress'
-
--- Insert Restaurant Order Products
-INSERT INTO Restaurant_order_product (restaurant_order_id, product_id, quantity)
-VALUES 
-(1, 1, 2),  -- Tilauksessa 1 on 2 Karjalanpiirikkaa
-(2, 2, 1),  -- Tilauksessa 2 on 1 Lohikeitto
-(3, 3, 1),  -- Tilauksessa 3 on 1 Ruisleipä
-(4, 4, 1);  -- Tilauksessa 4 on 1 Marjamehu
-
--- query joka hakee kaikki jälkiruoat 
-SELECT * FROM Product WHERE product_class="jälkiruoka";
--- nimeää Korvapuustin Korvariksi
-UPDATE Product SET name = "Korvari"  WHERE name = "Korvapuusti";
--- hakee kaikki jälkiruoat 
-SELECT * FROM Product WHERE product_class="jälkiruoka";
--- poistaa Korvarin tuotteista
-DELETE FROM Product WHERE name = "Korvari";
--- hakee kaikki jälkiruoat 
-SELECT * FROM Product WHERE product_class="jälkiruoka";

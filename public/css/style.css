@@ -49,6 +49,16 @@ a:link {
   }
 }
 
+table {
+  margin-top: 10px;
+}
+
+thead > tr > th {
+  font-weight: bold;
+  text-align: left;
+  padding-right: 2.5rem;
+}
+
 footer {
   background: var(--dark-gray);
   color: var(--white);
@@ -215,6 +225,11 @@ footer {
   opacity: 0.9;
 }
 
+#map {
+  border-radius: 20px;
+  height: 300px;
+}
+
 .round-image {
   clip-path: circle(50% at 50% 50%);
   width: 200px;
@@ -248,8 +263,7 @@ footer {
   background: var(--gradient);
   border-radius: 12px;
   padding: 2em;
-  #customer-info,
-  #customer-check {
+  .order-info-section {
     margin: 10px 0 10px 0;
   }
 }

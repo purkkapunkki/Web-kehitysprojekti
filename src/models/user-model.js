@@ -32,7 +32,7 @@ const createUser = async (firstName, lastName, email, password, isAdmin) => {
  */
 const checkIfUserExists = async (email, password) => {
   const sql = `
-      SELECT * FROM User
+      SELECT user_id, first_name, last_name, email, is_admin FROM User
       WHERE email = ? AND password = ?
     `;
   const params = [email, password];

@@ -1,0 +1,10 @@
+<select
+  id="order-status-<%= order.restaurant_order_id %>"
+  class="order-status"
+  data-order-id="<%= order.restaurant_order_id %>"
+  data-current-status="<%= order.restaurant_order_status %>"
+>
+  <option value="pending">Odottaa käsittelyä</option>
+  <option value="in-progress">Käsittelyssä</option>
+  <option value="complete">Valmis</option>
+</select>

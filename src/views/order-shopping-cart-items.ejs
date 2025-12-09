@@ -13,6 +13,8 @@
       src="https://kit.fontawesome.com/690006849c.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   </head>
   <body>
     <%- include('partials/navigation-bar.ejs') %>
@@ -62,10 +64,7 @@
           <section class="containers grid-column-2">
             <h2>Lasku</h2>
             <hr />
-            <p id="customer-check">
-              Kokonaishinta:
-              <span id="total-price"><%= cartTotalPrice %></span> €
-            </p>
+            <%- include('partials/cart-total-price.ejs') %>
             <a href="/order/cart-info" class="text-link"> Siirry eteenpäin </a>
           </section>
         </div>

@@ -2,8 +2,8 @@
   <section id="footer-restaurant-information">
     <h1>Tietoa meistä</h1>
     <p>
-      Olemme japanilaista ruokaa tarjoava pieni ravintola Espoon Tapiolassa,
-      löydät meiltä kattavan valikoiman erilaisia herkullisia ruokia pääruoista
+      Olemme japanilaista ruokaa tarjoava pieni ravintola Laajalahdessa, löydät
+      meiltä kattavan valikoiman erilaisia herkullisia ruokia pääruoista
       jälkiruokiin. Nettisivuiltamme voit tilata kätevästi haluamasi ruoat ja
       lopuksi noutaa tilauksesi ravintolastamme. <br />
       Osoite: Kissakuja 45 <br />
@@ -21,7 +21,18 @@
     </div>
   </section>
   <section id="footer-api-map">
-    <h1>Apimäppi</h1>
-    <p>leafletil yms feikkisijainti</p>
+    <h1>Sijaintimme</h1>
+    <div id="map"></div>
+    <script>
+      var map = L.map("map").setView([60.2059, 24.8099], 13);
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        attribution: "© OpenStreetMap",
+      }).addTo(map);
+
+      var marker = L.marker([60.2059, 24.8099]).addTo(map);
+      marker.bindPopup("Shinkai").openPopup();
+    </script>
   </section>
 </footer>

@@ -12,6 +12,8 @@
       src="https://kit.fontawesome.com/690006849c.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   </head>
   <body>
     <%- include('partials/navigation-bar.ejs') %>
@@ -22,6 +24,24 @@
         <div class="containers grid-column-1">
           <h2>Asiakkaiden tilaukset</h2>
           <hr />
+          <table id="order-table">
+            <thead>
+              <th>Tilaus-ID</th>
+              <th>Tilaaja</th>
+              <th>Tila</th>
+            </thead>
+            <tbody>
+              <% for (order of orders) { %>
+              <tr>
+                <td><%= order.restaurant_order_id %></td>
+                <td>
+                  <%= order.user_first_name %> <%= order.user_last_name %>
+                </td>
+                <td><%- include('partials/order-status-field.ejs') %></td>
+              </tr>
+              <% } %>
+            </tbody>
+          </table>
         </div>
         <div class="containers grid-column-2">
           <h2>Muokkaa ruokalistaa</h2>
@@ -34,5 +54,6 @@
     </main>
 
     <%- include('partials/footer.ejs') %>
+    <script src="/js/order-status-update.js"></script>
   </body>
 </html>

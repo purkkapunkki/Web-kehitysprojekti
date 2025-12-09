@@ -12,18 +12,20 @@
       src="https://kit.fontawesome.com/690006849c.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   </head>
   <body>
     <%- include('partials/navigation-bar.ejs') %>
 
     <main>
       <section class="containers grid-container">
-        <h1>Omat tiedot</h1>
+        <h1>Käyttäjän profiili</h1>
         <div class="containers grid-column-1">
-          <h2>Käyttäjän tiedot</h2>
+          <h2>Omat tiedot</h2>
           <hr />
-          <p>Nimi:</p>
-          <p>Sähköposti:</p>
+          <p>Nimi: <%= user.firstName %> <%= user.lastName %></p>
+          <p>Sähköposti: <%= user.email %></p>
           <br />
           <h2>Muokkaa henkilötietoja</h2>
           <button class="buttons">
@@ -36,8 +38,11 @@
           <hr />
           <% for (order of orders) { %>
           <p>
-            Tilaus <%= order.restaurant_order_id %>: <%=
-            order.restaurant_order_status %>
+            <span>Tilaus <%= order.restaurant_order_id %></span>:
+            <span
+              class="order-status-text"
+              data-raw-status="<%= order.restaurant_order_status %>"
+            ></span>
           </p>
           <% } %>
         </div>
@@ -45,5 +50,7 @@
     </main>
 
     <%- include('partials/footer.ejs') %>
+
+    <script src="/js/order-status-displaying.js"></script>
   </body>
 </html>

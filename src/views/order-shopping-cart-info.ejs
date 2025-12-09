@@ -12,6 +12,8 @@
       src="https://kit.fontawesome.com/690006849c.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   </head>
   <body>
     <%- include('partials/navigation-bar.ejs') %>
@@ -28,7 +30,10 @@
           <section class="containers grid-column-1">
             <h2>Yhteystietosi & maksutavan valinta</h2>
             <hr />
-            <p id="customer-info">yhteystiedot</p>
+            <div class="order-info-section">
+              <p>Nimi: <%= user.firstName %> <%= user.lastName %></p>
+              <p>Sähköposti: <%= user.email %></p>
+            </div>
             <form action="">
               <input
                 type="radio"
@@ -55,7 +60,7 @@
           <section class="containers grid-column-2">
             <h2>Lasku</h2>
             <hr />
-            <p id="customer-check">numeroita yms vatteja</p>
+            <%- include('partials/cart-total-price.ejs') %>
             <a href="/order/order-confirmation" class="text-link">
               Siirry eteenpäin
             </a>

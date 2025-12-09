@@ -22,17 +22,17 @@ const requireLogin = (req, res, next) => {
  * @param {express.NextFunction} next next function
  */
 const requireAdmin = (req, res, next) => {
-  requireLogin(req, res, (err) => {
-    if (err) {
-      return next(err);
-    }
-    if (!req.session.user.isAdmin) {
-      const error = new Error("Et ole ylläpitäjä");
-      error.status = 403;
-      next(error); // forward error to error handler
-    }
-    next();
-  });
+  if (!req.session.user) {
+    const error = new Error("Ole hyvä ja kirjaudu sisään");
+    error.status = 403;
+    return next(error); // forward error to error handler
+  }
+  if (!req.session.user.isAdmin) {
+    const error = new Error("Et ole ylläpitäjä");
+    error.status = 403;
+    return next(error); // forward error to error handler
+  }
+  next();
 };
 
 export { requireLogin, requireAdmin };
